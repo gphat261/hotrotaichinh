@@ -1,107 +1,382 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2867
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>VPBank CommCredit - Tiếp vốn nhanh</title>
+  <meta name="description" content="Đăng ký tư vấn tiếp vốn nhanh VPBank CommCredit. Quy trình nhanh, hạn mức cao, thủ tục đơn giản."/>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a33;
+      --muted:#a8b3cf;
+      --text:#eaf0ff;
+      --accent:#00d1ff;
+      --accent2:#2cff87;
+      --danger:#ff4d4f;
+      --radius:18px;
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(0,209,255,.18), transparent 60%),
+                  radial-gradient(900px 500px at 90% 20%, rgba(44,255,135,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:1040px;margin:0 auto;padding:22px}
+    header{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;padding:10px 0 18px;
+    }
+    .logos{display:flex;align-items:center;gap:12px}
+    .logo{
+      height:34px; width:auto; object-fit:contain;
+      filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
+    }
+    .badge{
+      font-size:12px;color:var(--muted);
+      border:1px solid rgba(255,255,255,.14);
+      padding:8px 10px;border-radius:999px;
+      background:rgba(255,255,255,.04);
+      white-space:nowrap;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .9fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr; }
+    }
+    .panel{
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panel-inner{padding:22px}
+    h1{margin:0 0 12px;font-size:34px;letter-spacing:-.02em}
+    @media (max-width: 520px){ h1{font-size:28px} }
+    .lead{color:var(--muted);font-size:16px;margin:0 0 18px}
+    .highlights{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px
+    }
+    @media (max-width:520px){.highlights{grid-template-columns:1fr}}
+    .hl{
+      padding:12px 14px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(15,26,51,.55);
+    }
+    .hl b{display:block;margin-bottom:4px}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .btn{
+      cursor:pointer;border:none;border-radius:14px;
+      padding:12px 14px;font-weight:700;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#06101a;
+      box-shadow: 0 10px 26px rgba(0,209,255,.18);
+    }
+    .btn.secondary{
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:none;
+    }
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="vi">\
-<head>\
-<meta charset="UTF-8">\
-<title>H\uc0\u7895  tr\u7907  t\'e0i ch\'ednh - Ti\u7871 p v\u7889 n kinh doanh</title>\
-<meta name="viewport" content="width=device-width, initial-scale=1.0">\
-<style>\
-body\{font-family:Arial;margin:0;background:#f4f6f8\}\
-.header\{background:#0b8f6a;color:white;padding:20px;text-align:center\}\
-.container\{max-width:900px;margin:auto;padding:20px\}\
-.box\{background:white;padding:20px;border-radius:10px;margin-bottom:20px\}\
-h2\{color:#0b8f6a\}\
-input,select,textarea,button\{width:100%;padding:10px;margin-top:10px;border-radius:5px;border:1px solid #ccc\}\
-button\{background:#0b8f6a;color:white;font-weight:bold;border:none\}\
-.footer\{background:#222;color:#ccc;text-align:center;padding:15px;font-size:13px\}\
-</style>\
-</head>\
-\
-<body>\
-\
-<div class="header">\
-<h1>H\uc0\u7895  tr\u7907  t\'e0i ch\'ednh \'96 Ti\u7871 p v\u7889 n kinh doanh</h1>\
-<p>K\uc0\u7871 t n\u7889 i t\u432  v\u7845 n v\u7889 n t\'edn ch\u7845 p cho h\u7897  kinh doanh</p>\
-</div>\
-\
-<div class="container">\
-\
-<div class="box">\
-<h2>Gi\uc0\u7843 i ph\'e1p t\'e0i ch\'ednh cho kinh doanh</h2>\
-<p>\
-Website n\'e0y ti\uc0\u7871 p nh\u7853 n nhu c\u7847 u t\u432  v\u7845 n ti\u7871 p v\u7889 n kinh doanh t\'edn ch\u7845 p.\
-H\uc0\u7841 n m\u7913 c, l\'e3i su\u7845 t v\'e0 th\u7901 i h\u7841 n ph\u7909  thu\u7897 c v\'e0o h\u7891  s\u417  v\'e0 k\u7871 t qu\u7843  th\u7849 m \u273 \u7883 nh theo quy \u273 \u7883 nh.\
-</p>\
-</div>\
-\
-<div class="box">\
-<h2>\uc0\u272 \u259 ng k\'fd t\u432  v\u7845 n</h2>\
-<form id="leadForm">\
-<input type="text" name="name" placeholder="H\uc0\u7885  v\'e0 t\'ean" required>\
-<input type="tel" name="phone" placeholder="S\uc0\u7889  \u273 i\u7879 n tho\u7841 i" required>\
-\
-<select name="area" required>\
-<option value="">Ch\uc0\u7885 n khu v\u7921 c</option>\
-<option>TP.HCM</option>\
-<option>B\'ecnh D\uc0\u432 \u417 ng</option>\
-<option>\uc0\u272 \u7891 ng Nai</option>\
-<option>Kh\'e1c</option>\
-</select>\
-\
-<select name="need" required>\
-<option value="">Nhu c\uc0\u7847 u v\u7889 n</option>\
-<option>B\uc0\u7893  sung v\u7889 n kinh doanh</option>\
-<option>Nh\uc0\u7853 p h\'e0ng</option>\
-<option>M\uc0\u7903  r\u7897 ng kinh doanh</option>\
-</select>\
-\
-<textarea name="note" placeholder="Ghi ch\'fa th\'eam (kh\'f4ng b\uc0\u7855 t bu\u7897 c)"></textarea>\
-\
-<label>\
-<input type="checkbox" required>\
- T\'f4i \uc0\u273 \u7891 ng \'fd cho ph\'e9p li\'ean h\u7879  t\u432  v\u7845 n v\'e0 x\u7917  l\'fd d\u7919  li\u7879 u theo ch\'ednh s\'e1ch b\u7843 o m\u7853 t.\
-</label>\
-\
-<button type="submit">G\uc0\u7917 i \u273 \u259 ng k\'fd</button>\
-</form>\
-</div>\
-\
-<div class="box">\
-<h2>Th\'f4ng tin li\'ean h\uc0\u7879 </h2>\
-<p>\
-Hotline t\uc0\u432  v\u7845 n: <b>0397.489.849</b><br>\
-\uc0\u272 \u7883 a ch\u7881 : 296 Phan X\'edch Long, P.7, Q.Ph\'fa Nhu\u7853 n, TP.HCM\
-</p>\
-</div>\
-\
-<div class="box">\
-<h2>Ch\'ednh s\'e1ch b\uc0\u7843 o m\u7853 t</h2>\
-<p>\
-Th\'f4ng tin kh\'e1ch h\'e0ng ch\uc0\u7881  d\'f9ng cho m\u7909 c \u273 \'edch li\'ean h\u7879  t\u432  v\u7845 n.\
-Kh\'e1ch h\'e0ng c\'f3 quy\uc0\u7873 n y\'eau c\u7847 u ch\u7881 nh s\u7917 a ho\u7863 c x\'f3a d\u7919  li\u7879 u.\
-</p>\
-</div>\
-\
-</div>\
-\
-<div class="footer">\
-hotrotaichinh.io.vn \'a9 2026 \'96 Website ti\uc0\u7871 p nh\u7853 n nhu c\u7847 u t\u432  v\u7845 n t\'e0i ch\'ednh\
-</div>\
-\
-<script>\
-document.getElementById("leadForm").addEventListener("submit",function(e)\{\
-e.preventDefault();\
-alert("\uc0\u272 \'e3 g\u7917 i \u273 \u259 ng k\'fd th\'e0nh c\'f4ng! Chuy\'ean vi\'ean s\u7869  li\'ean h\u7879  s\u7899 m.");\
-this.reset();\
-\});\
-</script>\
-\
-</body>\
-</html>\
-}
+    /* Form */
+    .form-head{
+      padding:18px 22px;
+      background: linear-gradient(135deg, rgba(0,209,255,.18), rgba(44,255,135,.12));
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+    .form-head h2{margin:0;font-size:18px}
+    .form-head p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    form{padding:18px 22px}
+    label{display:block;font-size:13px;color:var(--muted);margin:12px 0 6px}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(6,16,26,.55);
+      color:var(--text);
+      outline:none;
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(0,209,255,.55);
+      box-shadow:0 0 0 3px rgba(0,209,255,.15);
+    }
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:520px){.grid2{grid-template-columns:1fr}}
+    .note{margin-top:10px;color:var(--muted);font-size:12px}
+    .error{color:var(--danger);font-size:12px;margin-top:8px;display:none}
+    .success{
+      display:none;
+      padding:14px 14px;margin:14px 0 0;border-radius:14px;
+      border:1px solid rgba(44,255,135,.35);
+      background: rgba(44,255,135,.10);
+      color:#c8ffe1;
+      font-size:13px;
+    }
+    .loading{
+      opacity:.75; pointer-events:none;
+    }
+    footer{padding:18px 0;color:rgba(255,255,255,.55);font-size:12px}
+    .tiny{font-size:11px;color:rgba(255,255,255,.45)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logos">
+        <img class="logo" src="logo-commcredit.png" alt="CommCredit" />
+      </div>
+      <div class="badge">Giờ làm việc: 8h30–20h</div>
+    </header>
+
+    <section class="hero">
+      <!-- LEFT -->
+      <div class="panel">
+        <div class="panel-inner">
+          <h1>Tiếp vốn nhanh VPBank CommCredit</h1>
+          <p class="lead">
+            Dành cho người kinh doanh: đóng thuế TNCN / góp vốn doanh nghiệp / sở hữu BĐS.
+            Đăng ký để được tư vấn khoản vay phù hợp.
+          </p>
+
+          <div class="highlights">
+            <div class="hl">
+              <b>Hạn mức cao</b>
+              Lên đến <b>1 tỷ đồng</b>
+            </div>
+            <div class="hl">
+              <b>Thời hạn dài</b>
+              Tối đa <b>60 tháng</b>
+            </div>
+            <div class="hl">
+              <b>Thủ tục đơn giản</b>
+              Quy trình tinh gọn, hỗ trợ nhanh
+            </div>
+            <div class="hl">
+              <b>Không thế chấp</b>
+              Tuỳ hồ sơ, tư vấn chi tiết
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <button class="btn" type="button" onclick="document.getElementById('leadForm').scrollIntoView({behavior:'smooth'})">
+              Đăng ký nhận tư vấn
+            </button>
+            <button class="btn secondary" type="button" onclick="window.location.href='tel:0397489849'">
+              Gọi ngay: 0397 489 849
+            </button>
+          </div>
+
+          <p class="note tiny">
+            *Thông tin mang tính tham khảo. Điều kiện/ưu đãi phụ thuộc hồ sơ thực tế và chính sách từng thời điểm.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT (FORM) -->
+      <div class="panel">
+        <div class="form-head">
+          <h2>Đăng ký tư vấn miễn phí</h2>
+          <p>Điền thông tin, hệ thống sẽ ghi nhận và nhân viên liên hệ lại.</p>
+        </div>
+
+        <form id="leadForm" autocomplete="on">
+          <div class="grid2">
+            <div>
+              <label for="fullName">Họ và tên</label>
+              <input id="fullName" name="fullName" type="text" placeholder="VD: Nguyễn Văn A" required />
+            </div>
+            <div>
+              <label for="phone">Số điện thoại</label>
+              <input id="phone" name="phone" type="tel" placeholder="VD: 09xxxxxxxx" required />
+            </div>
+          </div>
+
+          <label for="city">Khu vực</label>
+          <input id="city" name="city" type="text" placeholder="VD: Hà Nội / TP.HCM / ..." />
+
+          <label for="need">Nhu cầu dự kiến</label>
+          <select id="need" name="need">
+            <option value="">Chọn nhu cầu</option>
+            <option value="Vay vốn kinh doanh">Vay vốn kinh doanh</option>
+            <option value="Bổ sung vốn ngắn hạn">Bổ sung vốn ngắn hạn</option>
+            <option value="Tư vấn sản phẩm phù hợp">Tư vấn sản phẩm phù hợp</option>
+          </select>
+
+          <label for="note">Ghi chú</label>
+          <textarea id="note" name="note" rows="3" placeholder="VD: cần vay 300tr, thời hạn 24 tháng..."></textarea>
+
+          <!-- Hidden fields: UTM + tracking -->
+          <input type="hidden" id="utm_source" name="utm_source">
+          <input type="hidden" id="utm_medium" name="utm_medium">
+          <input type="hidden" id="utm_campaign" name="utm_campaign">
+          <input type="hidden" id="utm_content" name="utm_content">
+          <input type="hidden" id="utm_term" name="utm_term">
+          <input type="hidden" id="page_url" name="page_url">
+          <input type="hidden" id="referrer" name="referrer">
+          <input type="hidden" id="created_at" name="created_at">
+
+          <div class="error" id="errBox"></div>
+
+          <button class="btn" id="submitBtn" type="submit" style="width:100%;margin-top:14px">
+            Gửi đăng ký
+          </button>
+
+          <div class="success" id="okBox">
+            ✅ Đã ghi nhận! Bạn vui lòng để ý điện thoại, nhân viên sẽ liên hệ trong giờ làm việc.
+          </div>
+
+          <p class="note">
+            Trụ sở chính: 89 Láng Hạ, Đống Đa, Hà Nội
+          </p>
+        </form>
+      </div>
+    </section>
+
+       <footer style="margin-top:30px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+        <img src="logo-vpbank.avif" alt="VPBank" style="height:32px;width:auto;object-fit:contain">
+        <span class="tiny">Đối tác liên kết: VPBank</span>
+      </div>
+
+      <div class="tiny">Trụ sở chính: 89 Láng Hạ, Đống Đa, Hà Nội</div>
+      <div class="tiny">Giờ làm việc: 8h30–20h</div>
+      <div class="tiny">Hotline: <a href="tel:0397489849">0397 489 849</a></div>
+      <div class="tiny">© VPBank CommCredit. All rights reserved.</div>
+    </footer>
+  </div> <!-- end .wrap -->
+
+
+  <script>
+    // 1) DÁN LINK WEB APP URL (Apps Script) CỦA BẠN Ở ĐÂY
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwV6n_2iVFrp59sP2rDKCty1lHZmtzw4zN3GR-zsnpPpWBiWQJblHQAARJDYMQfl1kh_Q/exec";
+
+    // 2) UTM capture
+    function getQueryParam(name){
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name) || "";
+    }
+    function fillHidden(){
+      const mapping = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"];
+      mapping.forEach(k => {
+        const el = document.getElementById(k);
+        if(el) el.value = getQueryParam(k);
+      });
+      document.getElementById("page_url").value = window.location.href;
+      document.getElementById("referrer").value = document.referrer || "";
+      document.getElementById("created_at").value = new Date().toISOString();
+    }
+    fillHidden();
+
+    // 3) Validate basic VN phone
+    function isValidPhoneVN(phone){
+      const p = (phone || "").replace(/\s|\.|-/g,"");
+      // chấp nhận 0xxxxxxxxx hoặc +84xxxxxxxxx (9-10 số sau 0 / 84)
+      return /^(0\d{9,10}|\+84\d{9,10})$/.test(p);
+    }
+
+    const form = document.getElementById("leadForm");
+    const errBox = document.getElementById("errBox");
+    const okBox = document.getElementById("okBox");
+    const submitBtn = document.getElementById("submitBtn");
+
+    function setError(msg){
+      errBox.style.display = "block";
+      errBox.textContent = msg;
+    }
+    function clearError(){
+      errBox.style.display = "none";
+      errBox.textContent = "";
+    }
+    function setLoading(isLoading){
+      if(isLoading){
+        form.classList.add("loading");
+        submitBtn.textContent = "Đang gửi...";
+      }else{
+        form.classList.remove("loading");
+        submitBtn.textContent = "Gửi đăng ký";
+      }
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      clearError();
+      okBox.style.display = "none";
+
+      if(!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes("YOUR_APPS_SCRIPT_WEB_APP_URL")){
+        setError("Bạn chưa dán Apps Script Web App URL vào biến APPS_SCRIPT_URL.");
+        return;
+      }
+
+      const fullName = document.getElementById("fullName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+
+      if(!fullName){
+        setError("Vui lòng nhập họ và tên.");
+        return;
+      }
+      if(!isValidPhoneVN(phone)){
+        setError("Số điện thoại chưa đúng định dạng (VD: 09xxxxxxxx hoặc +84xxxxxxxxx).");
+        return;
+      }
+
+      // Build payload
+      const payload = {
+        fullName,
+        phone,
+        city: document.getElementById("city").value.trim(),
+        need: document.getElementById("need").value,
+        note: document.getElementById("note").value.trim(),
+        utm_source: document.getElementById("utm_source").value,
+        utm_medium: document.getElementById("utm_medium").value,
+        utm_campaign: document.getElementById("utm_campaign").value,
+        utm_content: document.getElementById("utm_content").value,
+        utm_term: document.getElementById("utm_term").value,
+        page_url: document.getElementById("page_url").value,
+        referrer: document.getElementById("referrer").value,
+        created_at: document.getElementById("created_at").value
+      };
+
+      try{
+        setLoading(true);
+
+        // Gửi dạng JSON (Apps Script phía bạn cần doPost đọc JSON)
+        const res = await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        // Một số Apps Script trả text
+        const text = await res.text();
+
+        if(!res.ok){
+          throw new Error(text || "Gửi thất bại");
+        }
+
+        // Hiển thị thành công
+        okBox.style.display = "block";
+        form.reset();
+        fillHidden(); // fill lại hidden sau reset
+      }catch(err){
+        setError("Không gửi được. Vui lòng thử lại hoặc gọi hotline. (" + (err.message || "Lỗi") + ")");
+      }finally{
+        setLoading(false);
+      }
+    });
+  </script>
+</body>
+</html>
