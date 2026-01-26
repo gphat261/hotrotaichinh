@@ -331,6 +331,61 @@
       const p = (phone || "").replace(/\s|\.|-/g,"");
       return /^(0\d{9,10}|\+84\d{9,10})$/.test(p);
     }
+    // ====== CHECK THEO SĐT ======
+const checkBtn = document.getElementById("checkBtn");
+
+function fillFormFromData(data){
+  if(!data) return;
+  if(data.fullName) document.getElementById("fullName").value = data.fullName;
+  if(data.phone) document.getElementById("phone").value = data.phone;
+  if(data.city) document.getElementById("city").value = data.city;
+  if(data.need) document.getElementById("need").value = data.need;
+  if(data.note) document.getElementById("note").value = data.note;
+}
+
+async function lookupCustomer(phone){
+  const url = `${APPS_SCRIPT_URL}?action=lookup&phone=${encodeURIComponent(phone)}`;
+  const res = await fetch(url, { method: "GET" });
+  const text = await res.text();
+  let json = null;
+  try { json = JSON.parse(text); } catch(e) {}
+  if(!res.ok) throw new Error(json?.error || text || "Lookup failed");
+  return json || {};
+}
+
+checkBtn.addEventListener("click", async () => {
+  clearError();
+  okBox.style.display = "none";
+
+  const phone = document.getElementById("phone").value.trim();
+  if(!isValidPhoneVN(phone)){
+    setError("Vui lòng nhập SĐT đúng định dạng để kiểm tra.");
+    return;
+  }
+
+  try{
+    checkBtn.disabled = true;
+    checkBtn.textContent = "Đang kiểm tra...";
+
+    const r = await lookupCustomer(phone);
+
+    if(r.ok && r.found){
+      fillFormFromData(r.data);
+      okBox.style.display = "block";
+      okBox.textContent = "✅ Đã tìm thấy thông tin theo SĐT. Vui lòng kiểm tra lại trước khi gửi.";
+    }else{
+      okBox.style.display = "block";
+      okBox.textContent = "ℹ️ Chưa có thông tin theo SĐT này. Bạn vui lòng điền để đăng ký.";
+      document.getElementById("fullName").focus();
+    }
+  }catch(err){
+    setError("Không kiểm tra được. (" + (err.message || "Lỗi") + ")");
+  }finally{
+    checkBtn.disabled = false;
+    checkBtn.textContent = "Kiểm tra thông tin theo SĐT";
+  }
+});
+
 
     const form = document.getElementById("leadForm");
     const errBox = document.getElementById("errBox");
