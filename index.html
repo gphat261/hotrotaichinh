@@ -41,36 +41,30 @@
       filter:none;
       display:block;
     }
-@media(max-width:520px){
-  .logo{ height:44px; }
-}
+    @media(max-width:520px){
+      .logo{ height:44px; }
+    }
 
-
-.logo-badge{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:5px 10px;
-  border-radius:14px;
-  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.03));
-  border:1px solid rgba(255,255,255,.18);
-  box-shadow: 0 8px 18px rgba(0,0,0,.35);
-  transition: transform .2s ease, box-shadow .2s ease;
-  min-height:56px;
-
-}
-
-.logo-badge.small{
-  padding:8px 10px;
-  border-radius:12px;
-}
-
-
-.logo-badge:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 12px 24px rgba(0,0,0,.45);
-}
-
+    .logo-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:5px 10px;
+      border-radius:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow: 0 8px 18px rgba(0,0,0,.35);
+      transition: transform .2s ease, box-shadow .2s ease;
+      min-height:56px;
+    }
+    .logo-badge.small{
+      padding:8px 10px;
+      border-radius:12px;
+    }
+    .logo-badge:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(0,0,0,.45);
+    }
 
     .badge{
       font-size:12px;color:var(--muted);
@@ -124,7 +118,6 @@
       box-shadow:none;
     }
 
-    /* Form */
     .form-head{
       padding:18px 22px;
       background: linear-gradient(135deg, rgba(0,209,255,.18), rgba(44,255,135,.12));
@@ -159,9 +152,7 @@
       color:#c8ffe1;
       font-size:13px;
     }
-    .loading{
-      opacity:.75; pointer-events:none;
-    }
+    .loading{opacity:.75; pointer-events:none;}
     footer{padding:18px 0;color:rgba(255,255,255,.55);font-size:12px}
     .tiny{font-size:11px;color:rgba(255,255,255,.45)}
   </style>
@@ -171,11 +162,10 @@
   <div class="wrap">
     <header>
       <div class="logos">
-  <div class="logo-badge">
-    <img class="logo" src="./logo-commcredit.png" alt="CommCredit" />
-  </div>
-</div>
-
+        <div class="logo-badge">
+          <img class="logo" src="./logo-commcredit.png" alt="CommCredit" />
+        </div>
+      </div>
       <div class="badge">Giờ làm việc: 8h30–20h</div>
     </header>
 
@@ -189,38 +179,26 @@
             Đăng ký để được tư vấn khoản vay phù hợp.
           </p>
 
-          <div class="highlights">
-            <div style="margin-top:18px">
-  <div class="hl" style="margin-bottom:12px">
-    <b>Bạn đang kinh doanh và có nhu cầu vay vốn ?</b>
-    <div style="color:var(--muted);font-size:14px;margin-top:6px">
-      Chỉ cần bạn thuộc nhóm điều kiện phù hợp, bạn có thể được tư vấn gói tiếp vốn tối ưu theo hồ sơ thực tế.
-    </div>
-  </div>
+          <div style="margin-top:18px">
+            <div class="hl" style="margin-bottom:12px">
+              <b>Bạn đang kinh doanh và có nhu cầu vay vốn?</b>
+              <div style="color:var(--muted);font-size:14px;margin-top:6px">
+                Chỉ cần bạn thuộc nhóm điều kiện phù hợp, bạn có thể được tư vấn gói tiếp vốn tối ưu theo hồ sơ thực tế.
+              </div>
+            </div>
 
-  <div class="highlights" style="margin-top:0">
-    <div class="hl">
-      Hạn mức lên đến <b>2 tỷ đồng</b>
-    </div>
-    <div class="hl">
-      Thời hạn tối đa <b>60 tháng</b>
-    </div>
-    <div class="hl">
-      Hồ sơ đơn giản, giải ngân nhanh theo điều kiện thực tế
-    </div>
-    <div class="hl">
-      <b>Đặc quyền</b>
-      Lãi ưu đãi • thanh toán linh hoạt • hỗ trợ nhiều mục đích vay
-    </div>
-  </div>
+            <div class="highlights" style="margin-top:0">
+              <div class="hl">Hạn mức lên đến <b>2 tỷ đồng</b></div>
+              <div class="hl">Thời hạn tối đa <b>60 tháng</b></div>
+              <div class="hl">Hồ sơ đơn giản, giải ngân nhanh theo điều kiện thực tế</div>
+              <div class="hl"><b>Đặc quyền</b> Lãi ưu đãi • thanh toán linh hoạt • hỗ trợ nhiều mục đích vay</div>
+            </div>
 
-  <div class="hl" style="margin-top:12px">
-    <b>Phù hợp nếu bạn:</b>
-    <div style="color:var(--muted);font-size:14px;margin-top:6px">
-      • Đang kinh doanh và cần hỗ trợ vốn nhanh
-    </div>
-  </div>
-</div>
+            <div class="hl" style="margin-top:12px">
+              <b>Phù hợp nếu bạn:</b>
+              <div style="color:var(--muted);font-size:14px;margin-top:6px">• Đang kinh doanh và cần hỗ trợ vốn nhanh</div>
+            </div>
+          </div>
 
           <div class="cta-row">
             <button class="btn" type="button" onclick="document.getElementById('leadForm').scrollIntoView({behavior:'smooth'})">
@@ -250,9 +228,16 @@
               <label for="fullName">Họ và tên</label>
               <input id="fullName" name="fullName" type="text" placeholder="VD: Nguyễn Văn A" required />
             </div>
+
             <div>
               <label for="phone">Số điện thoại</label>
               <input id="phone" name="phone" type="tel" placeholder="VD: 09xxxxxxxx" required />
+            </div>
+
+            <div style="grid-column:1 / -1">
+              <button class="btn secondary" id="checkBtn" type="button" style="width:100%;margin-top:12px">
+                Kiểm tra thông tin theo SĐT
+              </button>
             </div>
           </div>
 
@@ -270,7 +255,7 @@
           <label for="note">Ghi chú</label>
           <textarea id="note" name="note" rows="3" placeholder="VD: cần vay 300tr, thời hạn 24 tháng..."></textarea>
 
-          <!-- Hidden fields: UTM + tracking -->
+          <!-- Hidden fields -->
           <input type="hidden" id="utm_source" name="utm_source">
           <input type="hidden" id="utm_medium" name="utm_medium">
           <input type="hidden" id="utm_campaign" name="utm_campaign">
@@ -286,9 +271,7 @@
             Gửi đăng ký
           </button>
 
-          <div class="success" id="okBox">
-            ✅ Đăng ký thành công! Bạn vui lòng để ý điện thoại, chúng tôi sẽ liên hệ trong giờ làm việc.
-          </div>
+          <div class="success" id="okBox"></div>
 
           <p class="note">
             Khi gửi thông tin, bạn đồng ý để chúng tôi liên hệ tư vấn theo nhu cầu đăng ký.
@@ -297,47 +280,44 @@
       </div>
     </section>
 
-       <footer style="margin-top:30px">
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
-    <div class="logo-badge small">
-      <img src="./logo-vpbank.avif" alt="VPBank"
-           style="height:30px;width:auto;object-fit:contain;display:block">
-    </div>
-    <span class="tiny">Thương hiệu trực thuộc: VPBank</span>
-  </div>
-<div class="tiny" style="margin-top:10px; padding-top:10px; border-top:1px solid rgba(255,255,255,.12)">
-  <b>Thông tin pháp lý:</b><br/>
-  Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank).<br/>
-  Giấy phép thành lập và hoạt động số 94/GP-NHNN do <b>Ngân hàng Nhà nước Việt Nam</b> cấp ngày: 28/09/2018.<br/>
-  Trụ sở chính: <b>89 Láng Hạ, Đống Đa, Hà Nội</b>.<br/>
-  <span style="opacity:.85">
-    Lưu ý: Thông tin trên website mang tính tham khảo. Điều kiện, lãi suất và ưu đãi phụ thuộc hồ sơ thực tế và chính sách từng thời điểm của VPBank.
-  </span>
-</div>
+    <footer style="margin-top:30px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+        <div class="logo-badge small">
+          <img src="./logo-vpbank.avif" alt="VPBank" style="height:30px;width:auto;object-fit:contain;display:block">
+        </div>
+        <span class="tiny">Thương hiệu trực thuộc: VPBank</span>
+      </div>
 
-<div class="tiny" style="margin-top:8px;">
-  Đơn vị tiếp nhận thông tin & tư vấn: 
-  <b>VPBank CommCredit – Chi nhánh VPBank Gia Định</b><br/>
-  Địa chỉ: <b>296 Phan Xích Long, Phường Phú Nhuận, TP.HCM</b><br/>
-  Hotline: <a href="tel:0397489849">0397 489 849</a><br/>
-</div>
+      <div class="tiny" style="margin-top:10px; padding-top:10px; border-top:1px solid rgba(255,255,255,.12)">
+        <b>Thông tin pháp lý:</b><br/>
+        Ngân hàng TMCP Việt Nam Thịnh Vượng (VPBank).<br/>
+        Giấy phép thành lập và hoạt động số 94/GP-NHNN do <b>Ngân hàng Nhà nước Việt Nam</b> cấp ngày: 28/09/2018.<br/>
+        Trụ sở chính: <b>89 Láng Hạ, Đống Đa, Hà Nội</b>.<br/>
+        <span style="opacity:.85">
+          Lưu ý: Thông tin trên website mang tính tham khảo. Điều kiện, lãi suất và ưu đãi phụ thuộc hồ sơ thực tế và chính sách từng thời điểm của VPBank.
+        </span>
+      </div>
 
-<div class="tiny">© VPBank CommCredit. All rights reserved.</div>
+      <div class="tiny" style="margin-top:8px;">
+        Đơn vị tiếp nhận thông tin & tư vấn:
+        <b>VPBank CommCredit – Chi nhánh VPBank Gia Định</b><br/>
+        Địa chỉ: <b>296 Phan Xích Long, Phường Phú Nhuận, TP.HCM</b><br/>
+        Hotline: <a href="tel:0397489849">0397 489 849</a><br/>
+      </div>
 
-
+      <div class="tiny">© VPBank CommCredit. All rights reserved.</div>
+    </footer>
+  </div><!-- end .wrap -->
 
   <script>
-    // 1) DÁN LINK WEB APP URL (Apps Script) CỦA BẠN Ở ĐÂY
     const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwdJTlTaE2xFPp4ykczwprZegkUIQXQK-961DgcPS10Ee38FRNUJaxSjyHlGTG38mdjyA/exec";
 
-    // 2) UTM capture
     function getQueryParam(name){
       const url = new URL(window.location.href);
       return url.searchParams.get(name) || "";
     }
     function fillHidden(){
-      const mapping = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"];
-      mapping.forEach(k => {
+      ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach(k => {
         const el = document.getElementById(k);
         if(el) el.value = getQueryParam(k);
       });
@@ -347,10 +327,8 @@
     }
     fillHidden();
 
-    // 3) Validate basic VN phone
     function isValidPhoneVN(phone){
       const p = (phone || "").replace(/\s|\.|-/g,"");
-      // chấp nhận 0xxxxxxxxx hoặc +84xxxxxxxxx (9-10 số sau 0 / 84)
       return /^(0\d{9,10}|\+84\d{9,10})$/.test(p);
     }
 
@@ -358,6 +336,7 @@
     const errBox = document.getElementById("errBox");
     const okBox = document.getElementById("okBox");
     const submitBtn = document.getElementById("submitBtn");
+    const checkBtn = document.getElementById("checkBtn");
 
     function setError(msg){
       errBox.style.display = "block";
@@ -366,6 +345,14 @@
     function clearError(){
       errBox.style.display = "none";
       errBox.textContent = "";
+    }
+    function setOk(msg){
+      okBox.style.display = "block";
+      okBox.textContent = msg;
+    }
+    function clearOk(){
+      okBox.style.display = "none";
+      okBox.textContent = "";
     }
     function setLoading(isLoading){
       if(isLoading){
@@ -377,12 +364,60 @@
       }
     }
 
+    function fillFormFromData(data){
+      if(!data) return;
+      if(data.fullName) document.getElementById("fullName").value = data.fullName;
+      if(data.phone) document.getElementById("phone").value = data.phone;
+      if(data.city) document.getElementById("city").value = data.city;
+      if(data.need) document.getElementById("need").value = data.need;
+      if(data.note) document.getElementById("note").value = data.note;
+    }
+
+    async function lookupCustomer(phone){
+      const url = `${APPS_SCRIPT_URL}?action=lookup&phone=${encodeURIComponent(phone)}`;
+      const res = await fetch(url, { method: "GET" });
+      const text = await res.text();
+      let json = null;
+      try { json = JSON.parse(text); } catch(_) {}
+      if(!res.ok) throw new Error(json?.error || text || "Lookup failed");
+      return json || {};
+    }
+
+    checkBtn.addEventListener("click", async () => {
+      clearError(); clearOk();
+
+      const phone = document.getElementById("phone").value.trim();
+      if(!isValidPhoneVN(phone)){
+        setError("Vui lòng nhập SĐT đúng định dạng để kiểm tra.");
+        return;
+      }
+
+      try{
+        checkBtn.disabled = true;
+        checkBtn.textContent = "Đang kiểm tra...";
+
+        const r = await lookupCustomer(phone);
+
+        if(r.ok && r.found){
+          fillFormFromData(r.data);
+          setOk("✅ Đã tìm thấy thông tin theo SĐT. Vui lòng kiểm tra lại trước khi gửi.");
+        }else{
+          setOk("ℹ️ Chưa có thông tin theo SĐT này. Bạn vui lòng điền để đăng ký.");
+          document.getElementById("fullName").focus();
+        }
+      }catch(err){
+        setError("Không kiểm tra được. (" + (err.message || "Lỗi") + ")");
+      }finally{
+        checkBtn.disabled = false;
+        checkBtn.textContent = "Kiểm tra thông tin theo SĐT";
+      }
+    });
+
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      clearError();
-      okBox.style.display = "none";
+      clearError(); clearOk();
 
-      if(!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes("YOUR_APPS_SCRIPT_WEB_APP_URL")){
+      if(!APPS_SCRIPT_URL){
         setError("Bạn chưa dán Apps Script Web App URL vào biến APPS_SCRIPT_URL.");
         return;
       }
@@ -399,7 +434,6 @@
         return;
       }
 
-      // Build payload
       const payload = {
         fullName,
         phone,
@@ -419,24 +453,18 @@
       try{
         setLoading(true);
 
-        // Gửi dạng JSON (Apps Script phía bạn cần doPost đọc JSON)
         const res = await fetch(APPS_SCRIPT_URL, {
           method: "POST",
           headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify(payload)
         });
 
-        // Một số Apps Script trả text
         const text = await res.text();
+        if(!res.ok) throw new Error(text || "Gửi thất bại");
 
-        if(!res.ok){
-          throw new Error(text || "Gửi thất bại");
-        }
-
-        // Hiển thị thành công
-        okBox.style.display = "block";
+        setOk("✅ Đăng ký thành công! Bạn vui lòng để ý điện thoại, chúng tôi sẽ liên hệ trong giờ làm việc.");
         form.reset();
-        fillHidden(); // fill lại hidden sau reset
+        fillHidden();
       }catch(err){
         setError("Không gửi được. Vui lòng thử lại hoặc gọi hotline. (" + (err.message || "Lỗi") + ")");
       }finally{
@@ -446,4 +474,3 @@
   </script>
 </body>
 </html>
-
