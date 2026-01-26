@@ -309,83 +309,35 @@
     </footer>
   </div><!-- end .wrap -->
 
-  <script>
-    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby20fDBHYFzSzW8CIfTVIhGNpT0FQ_vevBWQg279dQqNl-iYXMnHLZZ9KZejDYU33Rq7g/exec";
+ <script>
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby20fDBHYFzSzW8CIfTVIhGNpT0FQ_vevBWQg279dQqNl-iYXMnHLZZ9KZejDYU33Rq7g/exec";
 
-    function getQueryParam(name){
-      const url = new URL(window.location.href);
-      return url.searchParams.get(name) || "";
-    }
-    function fillHidden(){
-      ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach(k => {
-        const el = document.getElementById(k);
-        if(el) el.value = getQueryParam(k);
-      });
-      document.getElementById("page_url").value = window.location.href;
-      document.getElementById("referrer").value = document.referrer || "";
-      document.getElementById("created_at").value = new Date().toISOString();
-    }
+  function getQueryParam(name){
+    const url = new URL(window.location.href);
+    return url.searchParams.get(name) || "";
+  }
+
+  function fillHidden(){
+    ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach(k => {
+      const el = document.getElementById(k);
+      if(el) el.value = getQueryParam(k);
+    });
+    const pageUrl = document.getElementById("page_url");
+    const referrer = document.getElementById("referrer");
+    const createdAt = document.getElementById("created_at");
+    if(pageUrl) pageUrl.value = window.location.href;
+    if(referrer) referrer.value = document.referrer || "";
+    if(createdAt) createdAt.value = new Date().toISOString();
+  }
+
+  function isValidPhoneVN(phone){
+    const p = (phone || "").replace(/\s|\.|-/g,"");
+    return /^(0\d{9,10}|\+84\d{9,10})$/.test(p);
+  }
+
+  // ====== MAIN ======
+  document.addEventListener("DOMContentLoaded", () => {
     fillHidden();
-
-    function isValidPhoneVN(phone){
-      const p = (phone || "").replace(/\s|\.|-/g,"");
-      return /^(0\d{9,10}|\+84\d{9,10})$/.test(p);
-    }
-    // ====== CHECK THEO SĐT ======
-const checkBtn = document.getElementById("checkBtn");
-
-function fillFormFromData(data){
-  if(!data) return;
-  if(data.fullName) document.getElementById("fullName").value = data.fullName;
-  if(data.phone) document.getElementById("phone").value = data.phone;
-  if(data.city) document.getElementById("city").value = data.city;
-  if(data.need) document.getElementById("need").value = data.need;
-  if(data.note) document.getElementById("note").value = data.note;
-}
-
-async function lookupCustomer(phone){
-  const url = `${APPS_SCRIPT_URL}?action=lookup&phone=${encodeURIComponent(phone)}`;
-  const res = await fetch(url, { method: "GET" });
-  const text = await res.text();
-  let json = null;
-  try { json = JSON.parse(text); } catch(e) {}
-  if(!res.ok) throw new Error(json?.error || text || "Lookup failed");
-  return json || {};
-}
-
-checkBtn.addEventListener("click", async () => {
-  clearError();
-  okBox.style.display = "none";
-
-  const phone = document.getElementById("phone").value.trim();
-  if(!isValidPhoneVN(phone)){
-    setError("Vui lòng nhập SĐT đúng định dạng để kiểm tra.");
-    return;
-  }
-
-  try{
-    checkBtn.disabled = true;
-    checkBtn.textContent = "Đang kiểm tra...";
-
-    const r = await lookupCustomer(phone);
-
-    if(r.ok && r.found){
-      fillFormFromData(r.data);
-      okBox.style.display = "block";
-      okBox.textContent = "✅ Đã tìm thấy thông tin theo SĐT. Vui lòng kiểm tra lại trước khi gửi.";
-    }else{
-      okBox.style.display = "block";
-      okBox.textContent = "ℹ️ Chưa có thông tin theo SĐT này. Bạn vui lòng điền để đăng ký.";
-      document.getElementById("fullName").focus();
-    }
-  }catch(err){
-    setError("Không kiểm tra được. (" + (err.message || "Lỗi") + ")");
-  }finally{
-    checkBtn.disabled = false;
-    checkBtn.textContent = "Kiểm tra thông tin theo SĐT";
-  }
-});
-
 
     const form = document.getElementById("leadForm");
     const errBox = document.getElementById("errBox");
@@ -438,6 +390,7 @@ checkBtn.addEventListener("click", async () => {
       return json || {};
     }
 
+    // ====== CHECK THEO SĐT ======
     checkBtn.addEventListener("click", async () => {
       clearError(); clearOk();
 
@@ -468,14 +421,10 @@ checkBtn.addEventListener("click", async () => {
       }
     });
 
+    // ====== SUBMIT FORM ======
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       clearError(); clearOk();
-
-      if(!APPS_SCRIPT_URL){
-        setError("Bạn chưa dán Apps Script Web App URL vào biến APPS_SCRIPT_URL.");
-        return;
-      }
 
       const fullName = document.getElementById("fullName").value.trim();
       const phone = document.getElementById("phone").value.trim();
@@ -526,6 +475,7 @@ checkBtn.addEventListener("click", async () => {
         setLoading(false);
       }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
